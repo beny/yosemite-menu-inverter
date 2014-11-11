@@ -47,20 +47,6 @@ relaunch "Window\\ Magnet"
 end
 relaunch "BitTorrent\\ Sync"
 
-# Degrees
-base_path = "/Applications/Degrees.app/Contents/Resources/"
-%w{cloud_highlighted cloud_moon_highlighted cloud_moon cloud_sun_highlighted
-  cloud_sun cloud clouds_highlighted clouds fog_highlighted
-  moon_cloud_highlighted moon_cloud moon_highlighted moon rain_highlighted
-  rain showers_highlighted showers snowflake_highlighted snowflake
-  sun_highlighted sun thunder_highlighted thunder}.each do |filename|
-  non_retina = base_path + filename + ".png"
-  retina = base_path + filename + "@2x.png"
-  sudo %{convert -negate "#{non_retina}" "#{non_retina}"}
-  sudo %{convert -negate "#{retina}" "#{retina}"}
-end
-relaunch "Degrees"
-
 # Radium
 base_path = "/Applications/Radium.app/Contents/Resources/"
 %w{menubar_icon_busy_1 menubar_icon_busy_2 menubar_icon_busy_3
